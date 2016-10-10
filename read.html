@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+ <script src="./jquery-3.1.1.min.js"></script>
+	<script src="./d3.min.js"></script>
+	<script src="read.js">
+	</script>
+	 <link rel="stylesheet" type="text/css" href="read.css">
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+	<title></title>
+</head>
+<body>
+		<div class="snip-button expandall" onclick="expandAll('#snip-main')">+++ expand all</div><br>
+		<div class="snip-button collapseall" onclick="collapseSnip('.snip.level1')">- - - collapse all</div>
+
+		<div id="snip-main">
+		</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+hw_init("./example_content.json","main");
+</script>

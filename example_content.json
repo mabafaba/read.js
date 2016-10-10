@@ -1,0 +1,74 @@
+	["read.js",
+		[
+			"A JavaScript library to write and display text in hierarchical and expandable form."
+			,"This can make writing and reading easier for all."
+				,[
+				"1) It helps the writer produce well structured articles"
+					,[
+					"because he starts writing with the biggest overarching points, and then expands to more detail from there. Articles are no longer written from the top to the bottom, but from the larger structure to the detail, preventing bad structure from the beginning."
+					 ]
+				, "2) Readers understand the structure instantly"
+					,["because they quickly see the whole picture first and can then easily keep track of where they are in a text."]
+				, "3) This accomodates for the fact that online readers don't like large fields of text, and don't read linearly." 
+					,[
+					{"type":"link","href":"https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/","text":"Eye tracking of online reading patterns"}
+					,{"type":"image", "src":"./projects/hw/patterns.png","style":"width:150px;"}
+					,"With read.js, the reader is presented with a few lines of easy text; if one or two points are interesting enough, they always have the option to a few more lines about a selected detail; recursively."]
+				]
+
+			,"Easy to Use"
+					
+					,["Writing in JSON: The Data structure is the writing structure"
+						,[
+						"Start with your whole text's top headlines in an array."
+							,[
+							"[\"This is part 1\", \"This is part 2\",\"This is part 3\"]"
+								,[
+								"This is Part 1", "This is Part 2","This is part 3"
+								]
+							]
+
+						,"Then add summaries of the main sub parts as the next level, by adding an array of text elements to the parent array:"
+							,[
+							"[\"This is part 1\",  <br>&nbsp; &nbsp; &nbsp; [\"first child of part 1\", <br> &nbsp; &nbsp; &nbsp; \"second child of part 1\"], <br>\"This is part 2\",<br>\"This is part 3\"]"
+								,[
+								"This is part 1", 
+										[
+										"first child of part 1"
+										,"second child of part 1"]
+								, "This is part 2"
+								,"This is part 3"
+								]
+							]
+		 					
+						,"There is no limit to the depth of the hierarchy. you can add as many levels as you like"
+							,[
+							"[\"Parent\", [\"Child\", [\"Grandchild\",[\"Grandgrandchild\",[\"Grandgrandgrandchild\"]]]]]"
+							,["Parent", ["Child", ["Grandchild",["Grandgrandchild",["Grandgrandgrandchild"]]]]]
+							]
+						
+						]
+					,"easy and modular custom styling in CSS"
+						,[
+						"Everything can be styled depending on level and collapsed / expanded state"
+						,"for example like this : .snip.level0.collapsed{ color:blue }"
+						,{"type":"link","href":"./project/hw/hw.css","text":"example css"}
+						]
+					]
+
+
+			,"Built with JavaScript, JSON and jQuery."
+				,["The articles are written in nested JSON arrays."
+
+				, "JavaScript and Jquery load the data and produce nested html divs."
+					,[
+					"A recursive function loops through the array, creates divs with text from all the Strings. But if it finds an array instead, it calls itself on that array. How cool is that."
+					]
+				,"A simple set of css classes is automatically applied to easily style the different levels."
+				]
+
+			,"Source code on GitHub!"
+		]	
+	 
+	]
+	

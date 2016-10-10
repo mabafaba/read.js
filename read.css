@@ -1,0 +1,233 @@
+
+
+/* 1.) read.js essentials. don't change unless you know what you are doing. edit the style further down in 2.)*/
+
+
+
+
+			.snip{
+				padding-left: inherit;
+				display: inherit;
+				position: relative;
+			}
+
+			/*this hides collapsed items. You can change this to for example grey out instead*/
+			.snip.hidden{
+				display: none !important;
+			}
+
+			/*this hides the button of collapsed divs*/
+			.snip.snip-button.hidden{
+				display: inline !important;
+			}
+
+			/*this hides either the "collapse" or the "expand" button depending on state*/
+			.snip-button-hidden{
+				display: none !important;
+			}
+
+			/* there are a few special items such as links and images. they can be styled with:*/
+			.snip.image{
+				width: 100%;
+			}
+
+			img.snip-image{
+				width: 100%;
+			}
+
+
+
+
+
+/* 2.) default read.js styling. Edit here to customize*/
+			/*the classes .snip, .has_children, .no_children, .expanded, .collapsed can be combined freely.*/
+
+
+			/* .snip is the generic class applied to all items (snips)*/
+
+			.snip {
+				text-align: left ;
+				margin-top: 3px;
+				padding-right: 0px;
+				cursor: default;
+				line-height: 1.5em;
+				width: 100%;
+				margin-left: 15px; 
+				background-color: white;
+				font-weight: normal !important;
+				font-family: sans-serif;
+				color: black;
+			}
+
+			/* snips that have children*/
+
+			.snip.has_children {
+
+			}
+
+			.snip.has_children:hover {
+			cursor:pointer; 
+			}
+
+
+			/* snips that have no children */
+
+			.snip.no_children{
+			}
+			.snip.no_children:hover{
+			cursor:default;
+			}
+
+			
+			/* snips after they have been expanded by user*/
+			.snip.has_children.expanded{
+
+			}
+			/* snips after they have been collapsed by user*/
+			.snip.has_children.collapsed{
+			/*cursor: s-resize;*/
+			}
+
+			/* the different levels can be styled individually.
+			Deeper levels inherit all styles that standard css children would inherit too */
+
+			.snip.level0 {			
+				font-size: 30px;
+				font-weight: normal;
+				display: block;
+				margin:15%;
+				margin-left: 15%;
+				margin-top:30px;
+				line-height: 50px;
+				cursor: default;
+				width: 70%
+			}
+
+			.snip.level1{
+				font-weight: bold;
+				font-size: 18px;
+				margin-top: 10px;
+				/*cursor: default;*/
+
+			}
+
+			/* adding padding only to snips on level 1, only when they are expanded*/
+
+			.snip.level1.expanded{
+				padding-bottom: 30px;
+			}
+
+			.snip.level2{
+				font-size: 14px;
+				font-weight: bold ;
+			}
+			.snip.level2.expanded{
+				padding-bottom: 30px;
+
+			}
+			/* because styles are inherited, this overwrites for example the font-weight defined in .snip.level2*/
+			.snip.level3{
+			font-weight: normal;
+			margin-top: 5px;
+			font-size: 14px;
+			}
+
+			.snip.level4{
+			margin-top: 2px;
+
+			}
+
+			/*this styles both the "+"" and "-" button. */
+
+			.snip-button{
+				display: inline;
+				color: blue;
+				font-size: 13px;
+				padding: 4px;
+				width: 0px;
+				overflow: visible;
+				position: absolute;
+				left:-15px;
+				/*right:5px;*/
+			}
+
+			/*custom style for the "-" button*/
+			.snip-collapse{
+				color: red !important;
+			}
+
+			/*custom style for the "+" button*/
+			.snip-expand{
+				color: rgb(0,0,255);
+			}
+
+			/*	note: if you want to replace the + and - by any other html:
+			you need to change the input parameters in the "expandButtons" function calls in the .js file
+			this should be done better, feel free to contribute*/
+
+
+			/*positioning and styling of the "expand all" and "collapse all" buttons.
+			Only works if these button divs are placed in html (see example html file)*/
+			.snip-button.expandall{
+				position: relative;
+				margin-left: 75%;
+					font-family: sans-serif;
+					cursor: pointer;
+					font-size: 10px;
+			white-space: nowrap;
+
+			}
+
+			.snip-button.collapseall{
+				position: relative;
+				margin-left: 75%;
+					font-family: sans-serif;
+					cursor: pointer;
+					color: red;
+					font-size: 10px;
+			white-space: nowrap;	
+
+			}
+
+
+
+			/*styling of special objects like links and images*/
+			.snip.link{
+			display: block;
+
+			}
+
+			snip.image{
+
+			}
+
+
+			snip.image.expanded{
+			}
+
+
+
+
+
+
+
+
+/*these are extra classes I used in this json. you can use, ignore or delete them*/
+
+			.one-third{
+				width: 30% !important;
+				display: inline-block;
+					}
+
+			.two-thirds{
+				width: 60% !important;
+				display: inline-block;
+
+					}
+
+			.snip-emph{
+			display: inline;
+			/*font-weight: bold;*/
+			color: red;
+
+			}
