@@ -12,7 +12,7 @@
 				, "3) This accomodates for the fact that online readers don't like large fields of text, and don't read linearly." 
 					,[
 					{"type":"link","href":"https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/","text":"Eye tracking of online reading patterns"}
-					,{"type":"image", "src":"./patterns.png","style":"width:150px;"}
+					,{"type":"image", "src":"./example.png","style":"width:150px;"}
 					,"With read.js, the reader is presented with a few lines of easy text; if one or two points are interesting enough, they always have the option to a few more lines about a selected detail; recursively."]
 				]
 
