@@ -52,7 +52,7 @@
 						,[
 						"Everything can be styled depending on level and collapsed / expanded state"
 						,"for example like this : .snip.level0.collapsed{ color:blue }"
-						,{"type":"link","href":"./project/hw/hw.css","text":"example css"}
+						,{"type":"link","href":"./read.css","text":"example css"}
 						]
 					]
 
