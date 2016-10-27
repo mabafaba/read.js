@@ -64,7 +64,7 @@
 					,[
 					"A recursive function loops through the array, creates divs with text from all the Strings. But if it finds an array instead, it calls itself on that array. How cool is that."
 					]
-				,"A simple set of css classes is automatically applied to easily style the different levels."
+				,"A simple set of css classes is automatically applied - easily style the different levels."
 				]
 
 			,"Source code on GitHub!"
